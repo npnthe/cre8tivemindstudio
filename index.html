@@ -14,7 +14,16 @@
   box-sizing: border-box;
 }
 
-body {
+body 
+ <div class="bg-logo"></div>
+  <script>
+  const bgLogo = document.querySelector('.bg-logo');
+
+  window.addEventListener('scroll', () => {
+    bgLogo.style.transform = `translateY(${window.scrollY * 0.25}px)`;
+  });
+</script>
+    {
   font-family: 'Inter', sans-serif;
   color: #eaeaea;
   min-height: 100vh;
