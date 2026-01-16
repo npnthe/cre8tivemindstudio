@@ -5,96 +5,26 @@
   <title>Cre8tiveMindStudio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* GENEL AYARLAR */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-    }
-
-    /* LOGO */
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .logo {
-      width: 140px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-
-    /* HERO ALANI */
-    .hero {
-      text-align: center;
-      color: #333;
-    }
-
-    .hero h1 {
-      margin: 20px 0 10px;
-      font-size: 2.5em;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .hero p {
-      margin: 10px 0;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #fff;
-      color: #333;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    .buttons a:hover {
-      background: #333;
-      color: #fff;
-      transform: scale(1.05);
-    }
-
-    /* ANIMASYONLAR */
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-  </style>
 </head>
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+</style>
 <body>
-  <!-- LOGO -->
-  <div class="header">
-    <img src="logo.png" alt="Logo" class="logo">
-  </div>
 
-  <!-- HERO ALANI -->
   <section class="hero">
     <h1 class="brand reveal">Cre8tiveMindStudio</h1>
     <p class="slogan reveal">We design, you stand out.</p>
@@ -113,4 +43,10 @@
 
   <script src="js/main.js"></script>
 </body>
+  <body>
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo">
+  </div>
+</body>
+
 </html>
