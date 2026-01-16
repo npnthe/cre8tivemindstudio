@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cre8tiveMind Studio</title>
+<title>Cre8ativeMind Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,9 @@ body {
   color: #eaeaea;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, #1a2233 0%, #0b0f1a 45%, #05070f 100%);
+    radial-gradient(circle at center, rgba(10,15,30,.85), #05070f),
+    url("bg-logo.png") no-repeat center;
+  background-size: 65%;
 }
 
 /* ---------- HEADER ---------- */
@@ -38,14 +40,15 @@ header {
   gap: 10px;
   font-weight: 600;
   letter-spacing: 1px;
+  font-size: 14px;
 }
 
 .logo img {
-  width: 36px;
+  width: 34px;
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 26px;
   text-decoration: none;
   color: #cfd6ff;
   font-size: 14px;
@@ -58,7 +61,7 @@ nav a:hover {
 }
 
 .nav-btn {
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 10px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
@@ -67,13 +70,14 @@ nav a:hover {
 /* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding: 100px 20px 80px;
+  padding: 130px 20px 100px;
 }
 
 .hero h1 {
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 52px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.2;
 }
 
 .hero h1 span {
@@ -81,40 +85,41 @@ nav a:hover {
 }
 
 .hero p {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: 18px;
   opacity: .85;
 }
 
 .cta {
-  margin-top: 35px;
+  margin-top: 38px;
 }
 
 .cta a {
   display: inline-block;
-  padding: 14px 36px;
+  padding: 14px 38px;
   border-radius: 14px;
   text-decoration: none;
   color: white;
-  background: linear-gradient(135deg, #4e6cff, #8fa3ff);
-  box-shadow: 0 10px 30px rgba(79,110,255,.35);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
   transition: .3s;
 }
 
 .cta a:hover {
-  transform: translateY(-3px);
+  background: rgba(255,255,255,0.18);
 }
 
 /* ---------- SERVICES ---------- */
 .section {
   max-width: 1200px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   font-weight: 500;
   opacity: .9;
 }
@@ -122,25 +127,24 @@ nav a:hover {
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 28px;
 }
 
 .card {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border-radius: 18px;
-  padding: 35px 30px;
+  padding: 38px 30px;
   border: 1px solid rgba(255,255,255,0.1);
   transition: .3s;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  background: rgba(255,255,255,0.08);
 }
 
 .card h3 {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   font-weight: 500;
 }
 
@@ -153,13 +157,13 @@ nav a:hover {
 /* ---------- CONNECT ---------- */
 .connect {
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 
 .socials a {
-  margin: 8px;
+  margin: 10px;
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 12px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.15);
@@ -176,9 +180,9 @@ nav a:hover {
 /* ---------- FOOTER ---------- */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 26px;
   font-size: 12px;
-  opacity: .5;
+  opacity: .45;
 }
 </style>
 </head>
@@ -193,9 +197,9 @@ footer {
 
   <nav>
     <a href="#">Home</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
-    <a href="#" class="nav-btn">View Work</a>
+    <a href="mailto:cre8tivemindstudio@gmail.com">Contact</a>
+    <a href="https://www.behance.net/gallery/241935591/Portfolio" target="_blank" class="nav-btn">View Work 1</a>
+    <a href="https://www.behance.net/gallery/241938543/My-Portfolio" target="_blank" class="nav-btn">View Work 2</a>
   </nav>
 </header>
 
@@ -204,7 +208,7 @@ footer {
   <p>We design, you stand out.</p>
 
   <div class="cta">
-    <a href="#">View Work</a>
+    <a href="https://www.behance.net/cre8tivemindstudio" target="_blank">View Work</a>
   </div>
 </section>
 
@@ -235,8 +239,6 @@ footer {
   <div class="socials">
     <a href="https://www.instagram.com/cre8tivemindstudio" target="_blank">Instagram</a>
     <a href="mailto:cre8tivemindstudio@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/ecem-nur-kahr%C4%B1man-56b271328" target="_blank">LinkedIn · Ecem</a>
-    <a href="https://www.linkedin.com/in/esra-erman-48692b242" target="_blank">LinkedIn · Esra</a>
   </div>
 </section>
 
