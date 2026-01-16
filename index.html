@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cre8ativeMind Studio</title>
+<title>Cre8tiveMind Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -19,38 +19,37 @@ body {
   color: #eaeaea;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, #1c2433 0%, #0b0f1a 45%, #05070f 100%);
+    radial-gradient(circle at top, #1a2233 0%, #0b0f1a 45%, #05070f 100%);
 }
 
-/* ---------------- HEADER ---------------- */
+/* ---------- HEADER ---------- */
 header {
   max-width: 1200px;
   margin: auto;
-  padding: 28px 24px;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.brand-left {
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 1px;
-  opacity: .9;
 }
 
-.brand-left img {
-  width: 32px;
+.logo img {
+  width: 36px;
 }
 
 nav a {
-  margin-left: 26px;
+  margin-left: 25px;
   text-decoration: none;
-  font-size: 14px;
   color: #cfd6ff;
-  opacity: .8;
+  font-size: 14px;
+  opacity: .85;
   transition: .3s;
 }
 
@@ -58,41 +57,27 @@ nav a:hover {
   opacity: 1;
 }
 
-.view-btn {
-  padding: 8px 18px;
+.nav-btn {
+  padding: 8px 16px;
   border-radius: 10px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* ---------------- HERO ---------------- */
+/* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding: 110px 20px 90px;
+  padding: 100px 20px 80px;
 }
 
-.hero-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  margin-bottom: 30px;
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.hero-logo .big-b {
-  font-size: 120px;
-  font-weight: 600;
-  opacity: .25;
-}
-
-.hero-logo .title {
-  text-align: left;
-}
-
-.hero-logo h1 {
-  font-size: 42px;
-  font-weight: 500;
-  letter-spacing: 3px;
+.hero h1 span {
+  font-weight: 300;
 }
 
 .hero p {
@@ -101,84 +86,85 @@ nav a:hover {
   opacity: .85;
 }
 
-.hero .cta {
+.cta {
   margin-top: 35px;
 }
 
-.hero .cta a {
+.cta a {
+  display: inline-block;
   padding: 14px 36px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
   text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #4e6cff, #8fa3ff);
+  box-shadow: 0 10px 30px rgba(79,110,255,.35);
   transition: .3s;
 }
 
-.hero .cta a:hover {
-  background: rgba(255,255,255,0.15);
+.cta a:hover {
+  transform: translateY(-3px);
 }
 
-/* ---------------- SECTION ---------------- */
+/* ---------- SERVICES ---------- */
 .section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 80px 20px;
-  text-align: center;
 }
 
 .section h2 {
-  font-weight: 400;
+  text-align: center;
   margin-bottom: 50px;
+  font-weight: 500;
   opacity: .9;
 }
 
-/* ---------------- CARDS ---------------- */
-.cards {
+.services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  gap: 25px;
 }
 
 .card {
-  padding: 40px 30px;
-  border-radius: 18px;
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 35px 30px;
   border: 1px solid rgba(255,255,255,0.1);
   transition: .3s;
 }
 
 .card:hover {
   transform: translateY(-6px);
+  background: rgba(255,255,255,0.08);
 }
 
 .card h3 {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   font-weight: 500;
 }
 
 .card p {
   font-size: 14px;
   line-height: 1.6;
-  opacity: .75;
+  opacity: .8;
 }
 
-/* ---------------- CONNECT ---------------- */
+/* ---------- CONNECT ---------- */
 .connect {
   text-align: center;
-  padding-bottom: 90px;
+  padding-bottom: 80px;
 }
 
 .socials a {
-  margin: 10px;
+  margin: 8px;
   display: inline-block;
-  padding: 12px 22px;
+  padding: 12px 20px;
   border-radius: 12px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.15);
-  color: #cfd6ff;
   text-decoration: none;
+  color: #cfd6ff;
   font-size: 14px;
   transition: .3s;
 }
@@ -187,12 +173,12 @@ nav a:hover {
   background: rgba(255,255,255,0.12);
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
-  padding: 26px;
+  padding: 25px;
   font-size: 12px;
-  opacity: .45;
+  opacity: .5;
 }
 </style>
 </head>
@@ -200,7 +186,7 @@ footer {
 <body>
 
 <header>
-  <div class="brand-left">
+  <div class="logo">
     <img src="logo.png" alt="logo">
     CRE8ATIVEMINDSTUDIO
   </div>
@@ -209,18 +195,12 @@ footer {
     <a href="#">Home</a>
     <a href="#">Portfolio</a>
     <a href="#">Contact</a>
-    <a href="#" class="view-btn">View Work</a>
+    <a href="#" class="nav-btn">View Work</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-logo">
-    <div class="big-b">B</div>
-    <div class="title">
-      <h1>CRE8ATIVEMIND<br>STUDIO</h1>
-    </div>
-  </div>
-
+  <h1>CRE<span>8</span>ATIVEMIND<br>STUDIO</h1>
   <p>We design, you stand out.</p>
 
   <div class="cta">
@@ -231,7 +211,7 @@ footer {
 <section class="section">
   <h2>What We Do</h2>
 
-  <div class="cards">
+  <div class="services">
     <div class="card">
       <h3>Graphic Design</h3>
       <p>Creating striking visuals and compelling brand identities that capture attention.</p>
@@ -261,7 +241,7 @@ footer {
 </section>
 
 <footer>
-  © 2025 Cre8ativeMindStudio · All rights reserved
+  © 2025 Cre8ativeMindStudio. All rights reserved.
 </footer>
 
 </body>
