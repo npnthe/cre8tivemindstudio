@@ -4,35 +4,34 @@
   <meta charset="UTF-8">
   <title>Cre8tiveMindStudio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <style>
-    /* ================== GENEL AYAR ================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="css/style.css">
 
+  <style>
+    /* GENEL AYARLAR */
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      min-height: 200vh; /* scroll için yeterli alan */
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
-      overflow-x: hidden;
     }
 
-    /* ================== LOGO ================== */
+    /* LOGO */
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
     .logo {
-      width: 150px;
-      position: sticky; /* sayfada yavaşça scroll ile hareket */
-      top: 50px;
+      width: 140px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      z-index: 10;
     }
 
     .logo:hover {
@@ -40,42 +39,22 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
-    /* ================== HERO ================== */
+    /* HERO ALANI */
     .hero {
-      margin-top: 150px;
       text-align: center;
-      color: #fff;
-      width: 90%;
-      max-width: 800px;
-    }
-
-    .hero h1,
-    .hero p {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
-    }
-
-    .hero h1.visible,
-    .hero p.visible {
-      opacity: 1;
-      transform: translateY(0);
+      color: #333;
     }
 
     .hero h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      margin-bottom: 10px;
+      margin: 20px 0 10px;
+      font-size: 2.5em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero p {
-      font-size: 1.2em;
       margin: 10px 0;
-    }
-
-    /* ================== BUTONLAR ================== */
-    .buttons {
-      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .buttons a {
@@ -95,7 +74,12 @@
       transform: scale(1.05);
     }
 
-    /* ================== ANIMASYONLAR ================== */
+    /* ANIMASYONLAR */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
     @keyframes gradientBG {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
@@ -103,17 +87,23 @@
     }
   </style>
 </head>
+
 <body>
   <!-- LOGO -->
-  <img src="logo.png" alt="Logo" class="logo">
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo">
+  </div>
 
   <!-- HERO ALANI -->
   <section class="hero">
-    <h1>Cre8tiveMindStudio</h1>
-    <p>We design, you stand out.</p>
-    <p>Graphic Design · Illustration · Game Developer</p>
+    <h1 class="brand reveal">Cre8tiveMindStudio</h1>
+    <p class="slogan reveal">We design, you stand out.</p>
 
-    <div class="buttons">
+    <p class="services reveal">
+      Graphic Design · Illustration · Game Developer
+    </p>
+
+    <div class="buttons reveal">
       <a href="https://www.instagram.com/cre8tivemindstudio?igsh=NGxnNnR0Y2gzeml3&utm_source=qr" target="_blank">Instagram</a>
       <a href="mailto:cre8tivemindstudio@gmail.com">Mail</a>
       <a href="https://www.linkedin.com/in/ecem-nur-kahr%C4%B1man-56b271328" target="_blank">LinkedIn (Ecem)</a>
@@ -121,30 +111,6 @@
     </div>
   </section>
 
-  <!-- ================== SCROLL JS ================== -->
-  <script>
-    // Scroll ile yazıları ortaya çıkarma
-    const elements = document.querySelectorAll('.hero h1, .hero p');
-
-    function revealOnScroll() {
-      const windowHeight = window.innerHeight;
-      elements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll); // sayfa yüklenince de kontrol et
-
-    // Logo parallax efekti
-    const logo = document.querySelector('.logo');
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      logo.style.transform = translateY(${scrollY * 0.2}px); // yavaş hareket
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
